@@ -50,7 +50,7 @@
 
 #### Task 2
 <br>
-  <dt> Create fist PlayBook: </dt><br>
+  <dt> Create first PlayBook: </dt><br>
   <dd> 1. Create msg-service.yaml.
 
        - https://github.com/borovoykirill/Ansible/blob/day-1/msg-service.yml
@@ -72,7 +72,7 @@
 
         $ ansible-lint -x 201,301,305 msg-service.yml
  </dd>
- <dd> 7. Run PlayBook sever times for check:
+ <dd> 7. Run PlayBook sever times for check.
 </dd>
 <br>
 <br>
