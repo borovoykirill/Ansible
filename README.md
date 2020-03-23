@@ -47,3 +47,53 @@
 ![alt text](https://github.com/borovoykirill/Ansible/blob/day-1/img/devops_ssh.png "Checked ssh via devops with -m ping")
 <br>
 <br>
+
+#### Task 2
+<br>
+  <dt> Create fist PlayBook: </dt><br>
+  <dd> 1. Create msg-service.yaml.
+
+       - https://github.com/borovoykirill/Ansible/blob/day-1/msg-service.yml
+  </dd>
+  <dd> 2. Created and make some minor fix into unit file:
+
+       - https://github.com/borovoykirill/Ansible/blob/day-1/msg-service.service
+ </dd>
+  <dd> 3. Created and make some minor fix into service file:
+
+        - https://github.com/borovoykirill/Ansible/blob/day-1/msg-service.service
+
+   </dd>
+   <dd> 5. Apply playbook:
+
+         $ ansible-playbook msg-service.yml -i inventory -v
+  </dd>
+  <dd> 6. Check PlayBook for mistake with ansible-lint:
+
+        $ ansible-lint -x 201,301,305 msg-service.yml
+ </dd>
+ <dd> 7. Run PlayBook sever times for check:
+</dd>
+<br>
+<br>
+
+**Connected to msg-service:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-1/img/almighty_Ansible.png "Hello, Ansible!")
+<br>
+<br>
+
+**Run PlayBook several times:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-1/img/run_playbook_several_times.png "changed != 0")
+<br>
+<br>
+
+
+**Used ansible-lint:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-1/img/check-lint.png "Check for mistakes")
+<br>
+<br>
+
+**My project tree:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-1/img/tree.png "Project tree")
+<br>
+<br>
