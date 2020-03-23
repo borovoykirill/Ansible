@@ -27,16 +27,23 @@
 <br>
 <br>
 
-**DNS records:** <br>
-![alt text](https://github.com/borovoykirill/GKE/blob/final_day/img/GCP-DNS.png "DNS records")
+**Created user: devops:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-1/img/create_user_devops.png "User: devops")
 <br>
 <br>
 
-**Connected to socks-shop use DNS:** <br>
-![alt text](https://github.com/borovoykirill/GKE/blob/final_day/img/socks-shop_dns.png "Access shop via DNS name")
+**Cole devops.sudoers:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-1/img/cp_sudoers.png "Maked priviliges")
 <br>
 <br>
 
 
-**K8s cluster:** <br>
-![alt text](https://github.com/borovoykirill/GKE/blob/final_day/img/kub_cluster.png "K8s")
+**Added public key:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-1/img/authorized_keys.png "Added public key")
+<br>
+<br>
+
+**Checked ssh via user: devops:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-1/img/devops_ssh.png "Checked ssh via devops with -m ping")
+<br>
+<br>
