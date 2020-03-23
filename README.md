@@ -51,7 +51,7 @@
 #### Task 2
 <br>
   <dt> Create first PlayBook: </dt><br>
-  <dd> 1. Create msg-service.yaml.
+  <dd> 1. Create  PlayBook - msg-service.yaml.
 
        - https://github.com/borovoykirill/Ansible/blob/day-1/msg-service.yml
   </dd>
