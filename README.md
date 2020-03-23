@@ -53,7 +53,7 @@
   <dt> Create first PlayBook: </dt><br>
   <dd> 1. Create  PlayBook - msg-service.yaml.
 
-  [msg-service](https://github.com/borovoykirill/Ansible/blob/day-1/msg-service.yml)
+  [msg-service.yaml](https://github.com/borovoykirill/Ansible/blob/day-1/msg-service.yml)
 
   </dd>
   <dd> 2. Created and make some minor fix into unit file:
