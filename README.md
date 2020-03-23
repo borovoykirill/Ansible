@@ -53,15 +53,16 @@
   <dt> Create first PlayBook: </dt><br>
   <dd> 1. Create  PlayBook - msg-service.yaml.
 
-       - https://github.com/borovoykirill/Ansible/blob/day-1/msg-service.yml
+  [msg-service](https://github.com/borovoykirill/Ansible/blob/day-1/msg-service.yml)
+
   </dd>
   <dd> 2. Created and make some minor fix into unit file:
 
-       - https://github.com/borovoykirill/Ansible/blob/day-1/msg-service.service
+[msg-service.service](https://github.com/borovoykirill/Ansible/blob/day-1/files/msg-service.service)
  </dd>
-  <dd> 3. Created and make some minor fix into service file:
+  <dd> 3. Created and make some minor fix into conf file:
 
-        - https://github.com/borovoykirill/Ansible/blob/day-1/msg-service.service
+[msg.conf](https://github.com/borovoykirill/Ansible/blob/day-1/files/msg-service.conf)
 
    </dd>
    <dd> 5. Apply playbook:
