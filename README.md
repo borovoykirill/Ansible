@@ -12,7 +12,7 @@
  </dd>
   <dd> 3. Configured sudoers priviliges with copy file "devops"
 
-        $ ansible nodes -i inventory -u root -k -m copy -a "src=devops dest=/etc/sudoers.d/"
+        $ ansible nodes -i inventory -u root -k -m copy -a "src=.files/devops dest=/etc/sudoers.d/"
 
    </dd>
    <dd> 4. Generated and add public key:
