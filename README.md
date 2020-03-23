@@ -32,7 +32,7 @@
 <br>
 <br>
 
-**Cole devops.sudoers:** <br>
+**Copy devops.sudoers:** <br>
 ![alt text](https://github.com/borovoykirill/Ansible/blob/day-1/img/cp_sudoers.png "Maked priviliges")
 <br>
 <br>
