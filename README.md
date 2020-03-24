@@ -46,8 +46,21 @@
 <br>
 <br>
 
+**MySQL connected:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/mysql_connected.png "Connected!")
+<br>
+<br>
 
+<br>
+<dt> base: </dt><br>
+<dd> 1. Created role:
 
+      $ ansible-galaxy init base --offline
+</dd>
+<dd> 2. Install packages
+
+[base](https://github.com/borovoykirill/Ansible/tree/day-2/roles/base)
+</dd>
 
 
 
