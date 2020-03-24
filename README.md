@@ -4,47 +4,52 @@
 ### Kirill Baravoy
 #### Roles to be created
 <br>
-  <dt> mysql_db: </dt><br>
-  <dd> 1. Created role:
+<dt> mysql_db: </dt><br>
+<dd> 1. Created role:
 
        $ ansible-galaxy init mysql_db --offline
- </dd>
-  <dd> 2. Install MySQL
+</dd>
+<dd> 2. Install MySQL
 
-[mysql_db](https://github.com/borovoykirill/Ansible/blob/day-1/files/msg-service.service)
-   </dd>
-   <dd> 4. Generated and add public key:
+[mysql_db](https://github.com/borovoykirill/Ansible/tree/day-2/roles/mysql_db)
+</dd>
 
-         $ ansible nodes -i inventory -u root -k -m authorized_key -a "user=devops path=/home/devops/.ssh/authorized_keys key='{{ lookup('file', 'files/devops.ssh.id-rsa.pub') }}'"
-  </dd>
-  <dd> 5. Added next string into inventory:
+<br>
+<dt> mysql_db_user: </dt><br>
+<dd> 1. Created role:
 
-        [nodes]
-        host-1 ansible_host=10.128.15.231 ansible_user=devops ansible_connection=ssh ansible_ssh_private_key_file=~/.ssh/id_rsa
- </dd>
+        $ ansible-galaxy init mysql_db_user --offline
+</dd>
+<dd> 2. Create user and DB
+
+[mysql_db_user](https://github.com/borovoykirill/Ansible/tree/day-2/roles/mysql_db_user)
+</dd>
+
+<br>
+<dt> mysql-check: </dt><br>
+<dd> 1. Created role:
+
+      $ ansible-galaxy init mysql-check --offline
+</dd>
+<dd> 2. Deploy service mysql-check
+
+[mysql-check](https://github.com/borovoykirill/Ansible/tree/day-2/roles/mysql-check)
+</dd>
+
+**MySQL service status:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/status_mysql.png "MySQL status!")
 <br>
 <br>
 
-**Created user: devops:** <br>
-![alt text](https://github.com/borovoykirill/Ansible/blob/day-1/img/create_user_devops.png "User: devops")
-<br>
-<br>
-
-**Copy devops.sudoers:** <br>
-![alt text](https://github.com/borovoykirill/Ansible/blob/day-1/img/cp_sudoers.png "Maked priviliges")
+**mysql-check service status:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/status_mysql-check.png "mysql-check status")
 <br>
 <br>
 
 
-**Added public key:** <br>
-![alt text](https://github.com/borovoykirill/Ansible/blob/day-1/img/authorized_keys.png "Added public key")
-<br>
-<br>
 
-**Checked ssh via user: devops:** <br>
-![alt text](https://github.com/borovoykirill/Ansible/blob/day-1/img/devops_ssh.png "Checked ssh via devops with -m ping")
-<br>
-<br>
+
+
 
 #### Task 2
 <br>
