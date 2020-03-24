@@ -3,4 +3,7 @@
 
   roles:
   - base
-  - msg-service
+  - mysql_db
+  - mysql_db_user
+  - mysql-check
+  - user
