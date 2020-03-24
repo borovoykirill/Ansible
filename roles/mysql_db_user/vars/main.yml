@@ -7,5 +7,5 @@ mysql_user:
 mysql_password:
   pAssw0rd
 
-mysql_db_user_database:
+mysql_database:
   production
