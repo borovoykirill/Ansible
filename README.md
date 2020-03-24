@@ -66,3 +66,23 @@
 </dd>
 
 ---
+<br>
+<dt> user: </dt><br>
+<dd> 1. Created role:
+
+      $ ansible-galaxy init user --offline
+</dd>
+<dd> 2. Install packages
+
+[user](https://github.com/borovoykirill/Ansible/tree/day-2/roles/user)
+</dd>
+
+**Create user:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/create_user.png "Create user")
+<br>
+<br>
+
+**Add user to sudoers:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/add_user_to_sudoers.png "Sudoers")
+<br>
+<br>
