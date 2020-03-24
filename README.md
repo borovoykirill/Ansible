@@ -10,7 +10,7 @@
 </dd>
 <dd> 2. Install MySQL
 
-[mysql_db](https://github.com/borovoykirill/Ansible/tree/day-2/roles/mysql_db)
+[roles/mysql_db](https://github.com/borovoykirill/Ansible/tree/day-2/roles/mysql_db)
 </dd>
 
 ---
@@ -22,7 +22,7 @@
 </dd>
 <dd> 2. Create user and DB
 
-[mysql_db_user](https://github.com/borovoykirill/Ansible/tree/day-2/roles/mysql_db_user)
+[roles/mysql_db_user](https://github.com/borovoykirill/Ansible/tree/day-2/roles/mysql_db_user)
 </dd>
 
 ---
@@ -34,7 +34,7 @@
 </dd>
 <dd> 2. Deploy service mysql-check
 
-[mysql-check](https://github.com/borovoykirill/Ansible/tree/day-2/roles/mysql-check)
+[roles/mysql-check](https://github.com/borovoykirill/Ansible/tree/day-2/roles/mysql-check)
 </dd>
 
 **MySQL service status:** <br>
@@ -61,7 +61,7 @@
 </dd>
 <dd> 2. Install packages
 
-[base](https://github.com/borovoykirill/Ansible/tree/day-2/roles/base)
+[roles/base](https://github.com/borovoykirill/Ansible/tree/day-2/roles/base)
 </dd>
 
 **Ensures that requiretty disabled for all users:** <br>
@@ -77,7 +77,7 @@
 </dd>
 <dd> 2. Create user
 
-[user](https://github.com/borovoykirill/Ansible/tree/day-2/roles/user)
+[roles/user](https://github.com/borovoykirill/Ansible/tree/day-2/roles/user)
 </dd>
 
 **Create user:** <br>
