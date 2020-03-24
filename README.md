@@ -76,7 +76,7 @@
 
       $ ansible-galaxy init user --offline
 </dd>
-<dd> 2. Install packages
+<dd> 2. Create user
 
 [user](https://github.com/borovoykirill/Ansible/tree/day-2/roles/user)
 </dd>
