@@ -1,5 +1,4 @@
 # Ansible
------------------
 
 ### Kirill Baravoy
 #### Roles to be created
