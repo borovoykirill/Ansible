@@ -65,6 +65,10 @@
 [base](https://github.com/borovoykirill/Ansible/tree/day-2/roles/base)
 </dd>
 
+**Ensures that requiretty disabled for all users:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/base_!req.png "Default !requiretty")
+<br>
+<br>
 ---
 <br>
 <dt> user: </dt><br>
