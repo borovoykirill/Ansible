@@ -1,0 +1,15 @@
+---
+# tasks file for mysql_db
+
+- name: Update apt
+  apt:
+    update_cache: yes
+    cache_valid_time: 9999
+  become: yes
+
+- name: Install MySQL
+  apt:
+    pkg:
+    - mysql-server
+    - python-mysqldb
+  become: yes

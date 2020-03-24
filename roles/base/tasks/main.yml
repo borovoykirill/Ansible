@@ -1,0 +1,34 @@
+---
+# tasks file for base
+
+- name: Esure Ansible Facts Dir exists
+  file: path=/etc/ansible/facts.d state=directory recurse=yes
+  become: yes
+
+- name: Install python-pip
+  apt: name=python-pip
+  become: yes
+
+- name: Install Python Dependencies
+  pip: name={{ item }}
+  with_items:
+  - "{{ pip_packages }}"
+  become: yes
+
+- name: Install Curl
+  apt: name=curl
+  become: yes
+
+- name: Install Wget
+  apt: name=wget
+  become: yes
+
+- name: Install sudo
+  apt: name=sudo
+  become: yes
+
+- lineinfile:
+    path: /etc/sudoers
+    regexp: '^Defaults'
+    line: 'Defaults        !requiretty'
+  become: yes  

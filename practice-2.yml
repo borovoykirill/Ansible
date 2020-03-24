@@ -1,0 +1,6 @@
+- name: day2
+  hosts: nodes
+
+  roles:
+  - base
+  - msg-service

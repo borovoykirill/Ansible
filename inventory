@@ -1,0 +1,13 @@
+[control-machine]
+10.128.15.230
+
+[nodes]
+host-1 ansible_host=10.128.15.231
+
+[nodes:vars]
+ansible_user=devops
+ansible_connection=ssh
+ansible_ssh_private_key_file=~/.ssh/id_rsa
+
+[all:vars]
+ANSIBLE_STDOUT_CALLBACK=debug

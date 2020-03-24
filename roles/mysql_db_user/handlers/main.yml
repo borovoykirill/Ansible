@@ -1,0 +1,12 @@
+---
+# handlers file for mysql_db_user
+
+- name: Start mysql
+  service: name=mysql
+           enabled=yes
+           state=started
+- name: restart mysql
+  service: name=mysql
+           enabled=yes
+           state=restarted
+  become: yes         

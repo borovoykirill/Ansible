@@ -1,0 +1,59 @@
+---
+# tasks file for msg-service
+
+  - name: Check group exist
+    group:
+      name: msg-service
+      state: present
+    become: yes
+
+  - name: Create user for service
+    user:
+      name: msg-service
+      group: msg-service
+    become: yes
+
+  - name: Create a directory if dir doesn't exist
+    file:
+      path: /opt/msg-service/bin/
+      state: directory
+      owner: msg-service
+      group: msg-service
+    become: yes
+
+  - name: Create a directory if dir doesn't exist
+    file:
+      path: /opt/msg-service/conf/
+      state: directory
+      owner: msg-service
+      group: msg-service
+    become: yes
+
+  - name: Download (get_url) executable file
+    get_url:
+      url: https://playpit-labs-assets.s3-eu-west-1.amazonaws.com/msg-service/msg-server
+      dest: /opt/msg-service/bin/msg-server
+      owner: msg-service
+      group: msg-service
+      mode: 0744
+    become: yes
+
+  - name: Copy conf file with owner and permissions
+    copy:
+      src: msg-service.conf
+      dest: /opt/msg-service/conf/msg-service.conf
+      owner: msg-service
+      group: msg-service
+      mode: 0644
+    become: yes
+
+  - name: Copy systemd file with owner and permissions
+    copy:
+      src: msg-service.service
+      dest: /lib/systemd/system/msg-service.service
+      owner: root
+      group: root
+      mode: 0644
+    become: yes
+    notify:
+    - restart msg-service
