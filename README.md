@@ -14,10 +14,9 @@ All variables you can find at main playbook:<br>
 
       $ ansible-galaxy init base --offline
 </dd>
-<dd> 2. Install packages: </dd>
+<dd> 2. Install packages and ensures that folder exists and requiretty disabled: </dd>
 
 [base/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/base/tasks/main.yml) <br>
-[base/vars](https://github.com/borovoykirill/Ansible/blob/day-2/roles/base/vars/main.yml)
 </dd>
 
 **Ensures that requiretty disabled for all users:** <br>
@@ -48,6 +47,29 @@ All variables you can find at main playbook:<br>
 <br>
 <br>
 
+---
+<br>
+<dt> msg-service: </dt><br>
+<dd> 1. Created role:
+
+       $ ansible-galaxy init msg-service --offline
+</dd>
+<dd> 2. Deploy msg-service:
+
+[mysql_db/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/msg-service/tasks/main.yml) <br>
+[mysql_db/templates](https://github.com/borovoykirill/Ansible/tree/day-2/roles/msg-service/templates)
+[mysql_db/handlers](https://github.com/borovoykirill/Ansible/tree/day-2/roles/msg-service/handlers)
+</dd>
+
+**Rework msg-service:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/rework_ansible.png "Rework msg-service")
+<br>
+<br>
+
+**MySQL service status:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/status_mysql.png "MySQL status!")
+<br>
+<br>
 ---
 <br>
 <dt> mysql_db: </dt><br>
