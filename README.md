@@ -158,6 +158,7 @@ All variables you can find at main playbook:<br>
     $ ansible-lint -x 201,301,305 practice-2.yml
 </dd>
 <dd> Run playbook several times to make sure no side effect happens. </dd>
+<br>
 
 **Ansible-lint** <br>
 ![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/ansible-lint.png "Ansible-lint")
