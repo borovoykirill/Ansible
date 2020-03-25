@@ -89,11 +89,16 @@ All variables you can find at main playbook:<br>
 
         $ ansible-galaxy init mysql_db_user --offline
 </dd>
-<dd> 2. Create user, DB with python-mysqldb:
+<dd> 2. Create user, DB with python-mysqldb and encrypt pass:
 
 [mysql_db_user/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql_db_user/tasks/main.yml) <br>
 [mysql_db_user/handlers](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql_db_user/handlers/main.yml)
 </dd>
+
+**Encrypt password:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/encrypt_pass.png "Encrypt password")
+<br>
+<br>
 
 ---
 <br>
@@ -134,12 +139,33 @@ All variables you can find at main playbook:<br>
 </dd>
 
 **Sanity test:** <br>
-![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/mysql_connected.png "Connected!")
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/sanity_test.png "Sanity test")
 <br>
 <br>
 
 **Facts:** <br>
 ![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/fact1.png "Task and handlers for sanity test") <br>
 ![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/fact_done.png "Check facts")
+<br>
+<br>
+
+---
+<br>
+<dt> Test playbook quality: </dt><br>
+<dd> Use command
+
+
+    $ ansible-lint -x 201,301,305 practice-2.yml
+</dd>
+<dd> Run playbook several times to make sure no side effect happens. </dd>
+
+**Ansible-lint** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/ansible-lint.png "Ansible-lint")
+<br>
+<br>
+
+**Run playbook several times:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/run_playbook_several_times.png "changed=0") <br>
+
 <br>
 <br>

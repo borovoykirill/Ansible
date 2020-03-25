@@ -1,10 +1,12 @@
 - name: day2
   hosts: nodes
+  gather_facts: yes
+
   vars:
     student_first_name:
       Kirill
     student_last_name:
-      Baravoy  
+      Baravoy
 
   roles:
   - role: base
@@ -15,16 +17,16 @@
     vars:
       app_user:
         "{{ user_name }}"
-      app_group: 
+      app_group:
         "{{group_name}}"
       app_home:
-        "/opt/{{ user_name }}" 
+        "/opt/{{ user_name }}"
       app_port:
         8080
       app_msg_header:
-        "<img width='250' src='https://www.md-webdesigner.com/objectif-libre/wp-content/uploads/2017/05/Ansible.png'>"  
+        "<img width='250' src='https://www.md-webdesigner.com/objectif-libre/wp-content/uploads/2017/05/Ansible.png'>"
       app_msg_message:
-        "<i class='far fa-thumbs-up'></i>Almighty Ansible<p style='font-size: 16pt'>Student: {{ student_first_name }} {{ student_last_name }}</p>"   
+        "<i class='far fa-thumbs-up'></i>Almighty Ansible<p style='font-size: 16pt'>Student: {{ student_first_name }} {{ student_last_name }}</p>"
   - mysql_db
   - role: mysql_db_user
     vars:
@@ -36,9 +38,9 @@
           6331363930653264320a326631383264386464323762643034343164626364663637646432363139
           3238
       mysql_user:
-        kbaravoy   
+        kbaravoy
       mysql_database:
-        production   
+        production
   - role: mysql-check
     vars:
       mysql_check_port:
@@ -52,19 +54,19 @@
       group_name:
         kbaravoy
       group_id:
-         1312     
+         1312
 
   tasks:
-    - name: Check service on port 
+    - name: Check service on port
       command: 'netstat -tunlp | grep "{{ item.port }}"'
       register: test
       failed_when: not '{{ item.app }}' in test.stdout
       changed_when: false
       with_items:
-      - app: mysqld  
+      - app: mysqld
         port: 3306
-      - app: msg-server  
+      - app: msg-server
         port: 8080
-      - app: mysql-check  
-        port: 8081    
-      become: yes  
+      - app: mysql-check
+        port: 8081
+      become: yes
