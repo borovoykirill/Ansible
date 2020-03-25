@@ -62,7 +62,7 @@ All variables you can find at main playbook:<br>
 
 [mysql_db/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/msg-service/tasks/main.yml) <br>
 [mysql_db/templates](https://github.com/borovoykirill/Ansible/tree/day-2/roles/msg-service/templates) <br>
-[mysql_db/handlers](https://github.com/borovoykirill/Ansible/tree/day-2/roles/msg-service/handlers)
+[mysql_db/handlers](https://github.com/borovoykirill/Ansible/blob/day-2/roles/msg-service/handlers/main.yml)
 </dd>
 
 **Rework msg-service:** <br>
