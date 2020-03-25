@@ -145,7 +145,7 @@ All variables you can find at main playbook:<br>
 
 **Facts:** <br>
 ![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/fact1.png "Task and handlers for sanity test") <br>
-![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/fact_done.png "Check facts")
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/check_facts.png "Check facts")
 <br>
 <br>
 
