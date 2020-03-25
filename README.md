@@ -134,7 +134,7 @@ All variables you can find at main playbook:<br>
 <dt> Sanity test and facts : </dt><br>
 <dd> I create test for check all services via port and if msg-service config file  changed than service is goinng restart and it leaves facts about it.
 
-[Here you will find my Sanity test](https://github.com/borovoykirill/Ansible/blob/day-2/practice-2.yml) <br>
+[here you will find my Sanity test](https://github.com/borovoykirill/Ansible/blob/day-2/practice-2.yml) <br>
 [handlers for create fact](https://github.com/borovoykirill/Ansible/blob/day-2/roles/msg-service/handlers/main.yml)
 </dd>
 
