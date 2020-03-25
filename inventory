@@ -1,5 +1,5 @@
 [control-machine]
-10.128.15.230
+ansible ansible_host=10.128.15.230
 
 [nodes]
 host-1 ansible_host=10.128.15.231

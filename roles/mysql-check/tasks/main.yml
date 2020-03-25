@@ -13,20 +13,15 @@
       group: mysql-check
     become: yes
 
-  - name: Create a directory if it doesn't exist
+  - name: Create a directory /bin and /conf if it doesn't exist
     file:
-      path: /opt/mysql-check/bin/
+      path: "{{ item }}"
       state: directory
       owner: mysql-check
       group: mysql-check
-    become: yes
-
-  - name: Create a directory if it doesn't exist
-    file:
-      path: /opt/mysql-check/conf/
-      state: directory
-      owner: mysql-check
-      group: mysql-check
+    with_items:
+    -   /opt/mysql-check/bin/
+    -   /opt/mysql-check/conf/
     become: yes
 
   - name: Download file
@@ -40,7 +35,7 @@
 
   - name: Copying conf file with owner and permissions
     copy:
-      content: "PORT={{mysql_check_port}}"
+      content: "PORT={{ mysql_check_port }}"
       dest: /opt/mysql-check/conf/mysql-check.conf
       owner: mysql-check
       group: mysql-check

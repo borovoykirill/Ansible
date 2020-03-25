@@ -1,0 +1,58 @@
+---
+# tasks file for msg-service
+
+- name: Create directory /conf and /bin directory
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+  -   "{{ app_home | default('msg-service') }}/bin/"
+  -   "{{ app_home | default('msg-service') }}/conf/"
+  become: yes
+
+- name: Download executable file
+  get_url:
+    url: https://playpit-labs-assets.s3-eu-west-1.amazonaws.com/msg-service/msg-server
+    dest: "{{ app_home | default('msg-service') }}/bin/"
+    mode: '0755'
+  become: yes
+
+- name: Copy conf file and setup notify for service file if change
+  template:
+    src: msg-service.conf
+    dest: "{{ app_home | default('msg-service') }}/conf/msg-service.conf"
+  become: yes
+  notify:
+  - Restart msg-service 
+  - Changed fact 
+ 
+
+- name: Copy systemd file and setup notify for service file if change
+  template:
+    src: msg-service.service
+    dest: /lib/systemd/system/msg-service.service
+  become: yes
+  notify:
+  - Restart msg-service
+
+- name: Change ownership
+  file:
+    path: "{{ app_home | default('msg-service') }}"
+    state: directory
+    owner: "{{ app_user | default('msg-service') }}"
+    group: "{{ app_group | default('msg-service') }}"
+    recurse: yes
+  become: yes
+
+- name: Start app
+  systemd:
+    state: started
+    name: msg-service.service
+  become: yes
+
+- name: Enable app
+  systemd:
+    name: msg-service.service
+    enabled: yes
+    masked: no
+  become: yes

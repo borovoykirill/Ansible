@@ -1,11 +1,11 @@
 ---
 # tasks file for base
 
-- name: Esure Ansible Facts Dir exists
+- name: Ensures that ansible facts folder exists
   file: path=/etc/ansible/facts.d state=directory recurse=yes
   become: yes
 
-- name: Install python-pip
+- name: Install Python pip
   apt: name=python-pip
   become: yes
 
@@ -15,11 +15,11 @@
   - "{{ pip_packages }}"
   become: yes
 
-- name: Install Curl
+- name: Install curl
   apt: name=curl
   become: yes
 
-- name: Install Wget
+- name: Install wget
   apt: name=wget
   become: yes
 
@@ -27,7 +27,8 @@
   apt: name=sudo
   become: yes
 
-- lineinfile:
+- name: Ensures that requiretty disabled for all users
+  lineinfile:
     path: /etc/sudoers
     regexp: '^Defaults'
     line: 'Defaults        !requiretty'

@@ -8,7 +8,7 @@
 
        $ ansible-galaxy init mysql_db --offline
 </dd>
-<dd> 2. Install MySQL
+<dd> 2. Install MySQL:
 
 [mysql_db/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql_db/tasks/main.yml)
 </dd>
@@ -20,7 +20,7 @@
 
         $ ansible-galaxy init mysql_db_user --offline
 </dd>
-<dd> 2. Create user, DB with python-mysqldb
+<dd> 2. Create user, DB with python-mysqldb:
 
 [mysql_db_user/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql_db_user/tasks/main.yml) <br>
 [mysql_db_user/vars](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql_db_user/vars/main.yml) <br>
@@ -34,7 +34,7 @@
 
       $ ansible-galaxy init mysql-check --offline
 </dd>
-<dd> 2. Deploy service mysql-check
+<dd> 2. Deploy service mysql-check:
 
 [mysql-check/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql-check/tasks/main.yml) <br>
 [mysql-check/vars](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql-check/vars/main.yml) <br>
@@ -64,7 +64,7 @@
 
       $ ansible-galaxy init base --offline
 </dd>
-<dd> 2. Install packages </dd>
+<dd> 2. Install packages: </dd>
 
 [base/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/base/tasks/main.yml) <br>
 [base/vars](https://github.com/borovoykirill/Ansible/blob/day-2/roles/base/vars/main.yml)
@@ -81,7 +81,7 @@
 
       $ ansible-galaxy init user --offline
 </dd>
-<dd> 2. Create user </dd>
+<dd> 2. Create user: </dd>
 
 [user/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/user/tasks/main.yml) <br>
 [user/vars](https://github.com/borovoykirill/Ansible/blob/day-2/roles/user/vars/main.yml)

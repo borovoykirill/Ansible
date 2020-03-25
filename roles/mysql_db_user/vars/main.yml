@@ -1,11 +1,2 @@
 ---
 # vars file for mysql_db_user
-
-mysql_user:
-  kbaravoy
-
-mysql_password:
-  pAssw0rd
-
-mysql_database:
-  production
