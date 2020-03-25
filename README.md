@@ -34,7 +34,6 @@ All variables you can find at main playbook:<br>
 <dd> 2. Create user: </dd>
 
 [user/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/user/tasks/main.yml) <br>
-[user/vars](https://github.com/borovoykirill/Ansible/blob/day-2/roles/user/vars/main.yml)
 </dd>
 
 **Create user:** <br>
@@ -57,7 +56,7 @@ All variables you can find at main playbook:<br>
 <dd> 2. Deploy msg-service:
 
 [mysql_db/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/msg-service/tasks/main.yml) <br>
-[mysql_db/templates](https://github.com/borovoykirill/Ansible/tree/day-2/roles/msg-service/templates)
+[mysql_db/templates](https://github.com/borovoykirill/Ansible/tree/day-2/roles/msg-service/templates) <br>
 [mysql_db/handlers](https://github.com/borovoykirill/Ansible/tree/day-2/roles/msg-service/handlers)
 </dd>
 
