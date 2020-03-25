@@ -20,10 +20,10 @@
 
         $ ansible-galaxy init mysql_db_user --offline
 </dd>
-<dd> 2. Create user, DB with python-mysqldb </dd>
+<dd> 2. Create user, DB with python-mysqldb
 
 [mysql_db_user/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql_db_user/tasks/main.yml) <br>
-[mysql_db_user/vars](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql_db_user/vars/main.yml)
+[mysql_db_user/vars](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql_db_user/vars/main.yml) <br>
 [mysql_db_user/handlers](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql_db_user/handlers/main.yml)
 </dd>
 
@@ -36,7 +36,10 @@
 </dd>
 <dd> 2. Deploy service mysql-check
 
-[roles/mysql-check](https://github.com/borovoykirill/Ansible/tree/day-2/roles/mysql-check)
+[mysql-check/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql-check/tasks/main.yml)
+[mysql-check/vars](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql-check/vars/main.yml)
+[mysql-check/handlers](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql-check/handlers/main.yml)
+[mysql-check/files](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql-check/files/mysql-check.service)
 </dd>
 
 **MySQL service status:** <br>
