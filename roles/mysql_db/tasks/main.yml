@@ -4,12 +4,13 @@
 - name: Update apt
   apt:
     update_cache: yes
-    cache_valid_time: 9999
+    cache_valid_time: 3600
   become: yes
 
 - name: Install MySQL
   apt:
-    pkg:
+    name: "{{ item }}"
+  with_items:  
     - mysql-server
     - python-mysqldb
   become: yes
