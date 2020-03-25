@@ -24,6 +24,11 @@ All variables you can find at main playbook:<br>
 <br>
 <br>
 
+**Ensures that ansible facts folder exists:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/path_facts_true.png "Ansible facts folder existsy")
+<br>
+<br>
+
 ---
 <br>
 <dt> user: </dt><br>
@@ -65,10 +70,6 @@ All variables you can find at main playbook:<br>
 <br>
 <br>
 
-**MySQL service status:** <br>
-![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/status_mysql.png "MySQL status!")
-<br>
-<br>
 ---
 <br>
 <dt> mysql_db: </dt><br>
@@ -120,5 +121,25 @@ All variables you can find at main playbook:<br>
 
 **MySQL connected:** <br>
 ![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/mysql_connected.png "Connected!")
+<br>
+<br>
+
+---
+<br>
+<dt> Sanity test and facts : </dt><br>
+<dd> I create test for check all services via port and if msg-service config file  changed than service is goinng restart and it leaves facts about it.
+
+[Here you will find my Sanity test](https://github.com/borovoykirill/Ansible/blob/day-2/practice-2.yml) <br>
+[handlers for create fact](https://github.com/borovoykirill/Ansible/blob/day-2/roles/msg-service/handlers/main.yml)
+</dd>
+
+**Sanity test:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/mysql_connected.png "Connected!")
+<br>
+<br>
+
+**Facts:** <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/fact1.png "Task and handlers for sanity test") <br>
+![alt text](https://github.com/borovoykirill/Ansible/blob/day-2/img/fact_done.png "Check facts")
 <br>
 <br>
