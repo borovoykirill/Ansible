@@ -36,9 +36,9 @@
 </dd>
 <dd> 2. Deploy service mysql-check
 
-[mysql-check/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql-check/tasks/main.yml)
-[mysql-check/vars](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql-check/vars/main.yml)
-[mysql-check/handlers](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql-check/handlers/main.yml)
+[mysql-check/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql-check/tasks/main.yml) <br>
+[mysql-check/vars](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql-check/vars/main.yml) <br>
+[mysql-check/handlers](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql-check/handlers/main.yml) <br>
 [mysql-check/files](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql-check/files/mysql-check.service)
 </dd>
 
@@ -66,7 +66,8 @@
 </dd>
 <dd> 2. Install packages </dd>
 
-[roles/base](https://github.com/borovoykirill/Ansible/tree/day-2/roles/base)
+[base/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/base/tasks/main.yml) <br>
+[base/vars](https://github.com/borovoykirill/Ansible/blob/day-2/roles/base/vars/main.yml)
 </dd>
 
 **Ensures that requiretty disabled for all users:** <br>
@@ -82,7 +83,8 @@
 </dd>
 <dd> 2. Create user </dd>
 
-[roles/user](https://github.com/borovoykirill/Ansible/tree/day-2/roles/user)
+[user/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/user/tasks/main.yml) <br>
+[user/vars](https://github.com/borovoykirill/Ansible/blob/day-2/roles/user/vars/main.yml)
 </dd>
 
 **Create user:** <br>
