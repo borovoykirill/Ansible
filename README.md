@@ -1,7 +1,7 @@
 # Ansible
 -----------------
 
-### Kirill Baravoy h-1
+### h-1: Kirill Baravoy
 #### Task 1
 <br>
   <dt> Configure remote connection: </dt><br>
