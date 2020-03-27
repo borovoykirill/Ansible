@@ -77,7 +77,7 @@ All variables you can find at main playbook:<br>
 
        $ ansible-galaxy init mysql_db --offline
 </dd>
-<dd> 2. Install MySQL:
+<dd> 2. Install MySQL with python-mysqldb:
 
 [mysql_db/task](https://github.com/borovoykirill/Ansible/blob/day-2/roles/mysql_db/tasks/main.yml)
 </dd>
