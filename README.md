@@ -1,10 +1,11 @@
 # Ansible
 
-### h-2: Kirill Baravoy
+### h-3: Kirill Baravoy
 <br>
-All variables you can find at main playbook:<br>
+At this task I created "nginx-base" role which installs nginx and "web-service" role which add custom nginx <br>
 
-[practice-2.yml](https://github.com/borovoykirill/Ansible/blob/day-2/practice-2.yml)
+[nginx-base](https://github.com/borovoykirill/Ansible/blob/day-2/practice-2.yml) <br>
+[web-service](https://github.com/borovoykirill/Ansible/blob/day-2/practice-2.yml)
 
 #### Roles
 

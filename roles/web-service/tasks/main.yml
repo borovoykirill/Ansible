@@ -1,0 +1,8 @@
+---
+# tasks file for web-service
+- name: Copy nginx-backend config
+  template:
+    src: backend.conf
+    dest: /etc/nginx/conf.d/
+  notify: Restart Nginx
+  become: yes

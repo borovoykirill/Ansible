@@ -1,6 +1,15 @@
 ---
 # tasks file for mysql_db_user
 
+- name: Copy my.cnf
+  template:
+    src: my.cnf
+    dest: "~/.my.cnf"
+    owner: root
+    group: root
+    mode: 0644
+  become: yes  
+
 - name: Add user for create DB and start
   mysql_user:
     name: "{{ mysql_user }}"

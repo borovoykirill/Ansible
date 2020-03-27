@@ -1,0 +1,129 @@
+- name: App_Tier
+  hosts: app
+  gather_facts: yes
+  vars:
+    student_first_name:
+      Kirill
+    student_last_name:
+      Baravoy
+  roles:
+  - role: base  
+    vars:
+      pip_packages:
+        requests
+  - role: user
+    vars:
+      user_name:
+        kbaravoy
+      user_id:
+        1312
+      group_name:
+        kbaravoy
+      group_id:
+         1312 
+  - role: msg-service
+    vars:
+      app_user:
+        "{{ user_name }}"
+      app_group:
+        "{{group_name}}"
+      app_home:
+        "/opt/{{ user_name }}"
+      app_port:
+        8080
+      app_msg_header:
+        "<img width='250' src='https://www.md-webdesigner.com/objectif-libre/wp-content/uploads/2017/05/Ansible.png'>"
+      app_msg_message:
+        "<i class='far fa-thumbs-up'></i>Almighty Ansible<p style='font-size: 16pt'>Student: {{ student_first_name }} {{ student_last_name }}</p>"
+  - role: mysql-check
+    vars:
+      mysql_check_port:
+        8081
+        
+- name: DB_Tier 
+  hosts: db 
+  gather_facts: yes
+  vars:
+    student_first_name:
+      Kirill
+    student_last_name:
+      Baravoy        
+  roles:
+  - role: base  
+    vars:
+      pip_packages:
+        requests
+  - role: user
+    vars:
+      user_name:
+        kbaravoy
+      user_id:
+        1312
+      group_name:
+        kbaravoy
+      group_id:
+         1312 
+  - mysql_db
+  - role: mysql_db_user
+    vars:
+      mysql_password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          64383538333934623062333066356165306364626464363634663366323663343432396238396462
+          3338306631353330613862646661616262376639363564310a636238373333323164343634383433
+          33333236356135353663613932313734653339623337366234333562313733646631663535343463
+          6331363930653264320a326631383264386464323762643034343164626364663637646432363139
+          3238
+      mysql_user:
+        "{{ user_name }}"
+      mysql_database:
+        production
+
+- name: Web_Tier
+  hosts: web               
+  gather_facts: yes
+  vars:
+    student_first_name:
+      Kirill
+    student_last_name:
+      Baravoy    
+  roles:
+  - role: base  
+    vars:
+      pip_packages:
+        requests
+  - role: user
+    vars:
+      user_name:
+        kbaravoy
+      user_id:
+        1312
+      group_name:
+        kbaravoy
+      group_id:
+         1312    
+  - nginx-base
+  - role: web-service
+    vars:
+    backends:
+      - context: msg-service
+        hostip: 10.128.0.6
+        hostport: "{{ app_port }}"
+      - context: mysql-check
+        hostip: 10.128.0.6
+        hostport: "{{ mysql_check_port }}"        
+
+
+  # tasks:
+  #   - name: Check service on port
+  #     command: 'netstat -tunlp | grep "{{ item.port }}"'
+  #     register: test
+  #     failed_when: not '{{ item.app }}' in test.stdout
+  #     changed_when: false
+  #     with_items:
+  #     - app: mysqld
+  #       port: 3306
+  #     - app: msg-server
+  #       port: 8080
+  #     - app: mysql-check
+  #       port: 8081
+  #     become: yes
