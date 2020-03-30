@@ -2,8 +2,8 @@
   "builders": [
     {
       "type": "googlecompute",
-      "account_file": "./credentials/focus-task-272708-518cc247f148.json",
-      "project_id": "focus-task-272708",
+      "account_file": "./credentials/<credentials.json>",
+      "project_id": "<project_id>",
       "machine_type": "n1-standard-1",
       "source_image": "ubuntu-1604-xenial-v20200317",
       "zone": "us-central1-c",
