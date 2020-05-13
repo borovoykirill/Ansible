@@ -112,18 +112,3 @@
         hostip: 10.128.0.6
         hostport: "{{ mysql_check_port }}"        
 
-
-  # tasks:
-  #   - name: Check service on port
-  #     command: 'netstat -tunlp | grep "{{ item.port }}"'
-  #     register: test
-  #     failed_when: not '{{ item.app }}' in test.stdout
-  #     changed_when: false
-  #     with_items:
-  #     - app: mysqld
-  #       port: 3306
-  #     - app: msg-server
-  #       port: 8080
-  #     - app: mysql-check
-  #       port: 8081
-  #     become: yes
